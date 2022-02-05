@@ -2,6 +2,7 @@
 
 body {
 	font-family: "Lato", sans-serif;
+	box-sizing: border-box;
 }
 
 h2 {
@@ -66,7 +67,7 @@ header {
 
 .logo {
 	font-family: "Pangolin", cursive;
-	font-size: 72px;
+	font-size: 60px;
 	color: #fff;
 }
 
@@ -97,7 +98,7 @@ form {
 	padding: 10px;
 }
 
-form div {
+.form-div {
 	display: flex;
 	justify-content: space-between;
 }
@@ -154,22 +155,28 @@ footer p {
 		padding: 0 20px;
 	}
 
-	form {
+	.form-div-outer {
 		display: flex;
+		justify-content: space-between;
 		align-items: center;
-	}
-
-	form div {
 		flex: 5;
-		padding: 0 20px;
-		flex-direction: column;
 	}
 
-	form button {
-		flex: 3;
-		padding: 0;
-		height: 50px;
+	.form-div {
+		flex: 1;
+		flex-direction: column;
+		padding: 0 20px;
+	}
+	.form-div-button {
+		padding: 0 20px;
+		display: flex;
+	}
+
+	.form-div-button button {
 		font-size: 20px;
+		width: 30%;
+		margin: auto;
+		min-width: 110px;
 	}
 
 	form label {
@@ -177,19 +184,47 @@ footer p {
 	}
 
 	form select,
-	form input,
-	form label {
+	form input {
 		width: 100%;
-		margin: 0;
+		border: 1px solid gray;
 	}
 
 	.group {
-		flex-direction: row;
-		flex-wrap: wrap;
+		flex-flow: row wrap;
 	}
 }
 
 @media only screen and (min-width: 900px) {
-	
+	/* 
+		#stay section cuts off input fields between 480 and 900px. Rearrange form section to display with 3 total rows between these resolutions.
+	*/
+	form {
+		display: flex;
+		align-items: center;
+	}
 
+	.form-div-outer {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex: 5;
+	}
+
+	.form-div {
+		flex: 5;
+		padding: 0 20px;
+		flex-direction: column;
+	}
+
+	.form-div-button {
+		flex: 1;
+		padding: 0;
+		height: 100%;
+		font-size: 20px;
+	}
+
+	.form-div-button button {
+		margin: 0;
+		width: 100%;
+	}
 }

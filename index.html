@@ -30,31 +30,37 @@
 		<section id="stay">
 			<h2>Find the perfect vacation rental</h2>
 			<form>
-				<div>
-					<label for="location">Location</label>
-					<input type="search" name="location" id="location" placeholder="Search destination">
+				<div class="form-div-outer">
+					<div class="form-div">
+						<label for="location">Location</label>
+						<input type="search" name="location" id="location" placeholder="Search destination">
+					</div>
+					<div class="form-div">
+						<label for="arrival">Arrive</label>
+						<input type="date" name="arrival" id="arrival">
+					</div>
 				</div>
-				<div>
-					<label for="arrival">Arrive</label>
-					<input type="date" name="arrival" id="arrival">
+				<div class="form-div-outer">
+					<div class="form-div">
+						<label for="departure">Depart</label>
+						<input type="date" name="departure" id="departure">
+					</div>
+					<div class="form-div">
+						<label for="type">Type</label>
+						<select name="type" id="type">
+							<option value="apartment">Apartment</option>
+							<option value="barn">Barn</option>
+							<option value="castle">Castle</option>
+							<option value="houseboat">Houseboat</option>
+							<option value="tiny-house">Tiny House</option>
+							<option value="yacht">Yacht</option>
+							<option value="yurt">Yurt</option>
+						</select>
+					</div>
 				</div>
-				<div>
-					<label for="departure">Depart</label>
-					<input type="date" name="departure" id="departure">
+				<div class="form-div-button">
+					<button type="submit">Search</button>
 				</div>
-				<div>
-					<label for="type">Type</label>
-					<select name="type" id="type">
-						<option value="apartment">Apartment</option>
-						<option value="barn">Barn</option>
-						<option value="castle">Castle</option>
-						<option value="houseboat">Houseboat</option>
-						<option value="tiny-house">Tiny House</option>
-						<option value="yacht">Yacht</option>
-						<option value="yurt">Yurt</option>
-					</select>
-				</div>
-				<button type="submit">Search</button>
 			</form>
 		</section>
 
